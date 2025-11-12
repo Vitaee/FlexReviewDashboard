@@ -1,4 +1,3 @@
-import ThemeToggle from './ThemeToggle';
 import type { ThemeMode } from '../hooks/useTheme';
 
 const navLinks = [
@@ -13,7 +12,7 @@ interface SiteHeaderProps {
   onToggleTheme: () => void;
 }
 
-const SiteHeader = ({ theme, onToggleTheme }: SiteHeaderProps) => (
+const SiteHeader = ({}: SiteHeaderProps) => (
   <header className="sticky top-0 z-20 border-b border-slate-200 bg-white/90 backdrop-blur dark:border-slate-800 dark:bg-slate-900/80">
     <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-4 sm:px-6 lg:px-8">
       <div className="flex items-center gap-2">
@@ -38,15 +37,7 @@ const SiteHeader = ({ theme, onToggleTheme }: SiteHeaderProps) => (
           </a>
         ))}
       </nav>
-      <div className="flex items-center gap-3">
-        <ThemeToggle theme={theme} onToggle={onToggleTheme} />
-        <button
-          type="button"
-          className="rounded-full border border-slate-200 px-4 py-2 text-sm font-semibold text-slate-700 transition hover:border-indigo-200 hover:text-indigo-600 dark:border-slate-700 dark:text-slate-100 dark:hover:border-indigo-500 dark:hover:text-indigo-300"
-        >
-          Export
-        </button>
-      </div>
+      
     </div>
   </header>
 );
